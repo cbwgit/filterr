@@ -3,7 +3,7 @@
     <table class="table">
       <thead>
         <tr>
-          <th colspan="2">Company</th>
+          <th colspan="2">Company 555</th>
         </tr>
         <tr>
           <th>NAME</th>
@@ -33,10 +33,16 @@ export default {
       this.axios.get(process.env.VUE_APP_Server_URL+"company").then(response=>{
         this.data = response.data
       })
+    },
+    getTest(){
+      this.axios.get(process.env.VUE_APP_Server_URL+"test").then(response=>{
+        console.log(response)
+      })
     }
   },
   created() {
     this.getData()
+    this.getTest()
   },
 }
 </script>

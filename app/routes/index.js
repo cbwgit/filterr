@@ -16,4 +16,8 @@ router.get('/company',function(req,res){
     })
 })
 
+router.get('/test',function(req,res){
+  res.send("Hello")
+})
+
 module.exports = router;
